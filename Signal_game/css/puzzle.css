@@ -1,0 +1,189 @@
+/* General Body */
+
+#Intro{
+  width: 100%;
+  height: auto;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  align-items: center;
+  width: 20%;
+  height: 30%;
+  margin-top: -10%;
+  color: red;
+  background-color: #ccc;
+  outline: 0px;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+}
+
+/* Full-Screen Background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Send it behind other elements */
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container for the game */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-right: 230px;
+
+}
+
+/* The alien screen */
+.screen-container {
+  position: relative;
+  width: 840px;
+height: 670px;
+
+
+
+ 
+
+}
+
+/* Input zone */
+.input-zone {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 200px;
+  gap: 40px;
+}
+
+/* Rune elements */
+.rune {
+  width: 60px;
+  height: 60px;
+  line-height: 40px;
+  text-align: center;
+ border-radius: 5px;
+  margin: 0 5px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+
+
+
+}
+
+/* Draggable runes */
+.runes {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  width: 100%;
+  gap: 5px; /* Reduce spacing between runes */
+  width: fit-content; /* Prevents unnecessary stretching */
+  margin-top: 10px; /* Adjusts positioning */
+  margin-left: 10px;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+
+
+.draggable {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  cursor: pointer; /* Indicate clickable */
+  margin: 5px;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out; /* Smooth animation */
+  font-family: 'Uncial Antiqua', serif; /* Apply rune-like font */
+  letter-spacing: 2px; /* Space out letters a bit */
+}
+
+.draggable:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+
+/* Feedback flash animation */
+.feedback {
+  position: fixed; /* Covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 100; /* Ensure it's above all elements */
+  display: none;
+}
+.green-flash {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+
+.red-flash {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+/* Dragging styles */
+.dragging {
+  opacity: 0.5;
+}
+
+#back-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: transparent; /* Make background transparent */
+  color: white; /* White text */
+  font-size: 32px; /* Font size */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  z-index: 999; /* Ensure it's on top of other elements */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
+}
+
+#back-button:hover {
+  text-decoration: underline; /* Underline on hover */
+  
+}
+
